@@ -11,9 +11,11 @@ $.fn.contributors = function(username, reponame) {
     for (var idx = 0; idx < result.data.length; ++idx) {
       var contributor = result.data[idx];
       if (contributor.login !== username) {
-        $("<a/>&nbsp;")
+        $("<span><a/></span>")
+          .find("a")
           .attr("href", contributor.html_url)
           .text(contributor.login)
+          .end()
           .appendTo(elem);
       }
     }
