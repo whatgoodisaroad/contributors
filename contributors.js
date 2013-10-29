@@ -1,4 +1,3 @@
-// Create the new function
 $.fn.contributors = function(username, reponame) {
   var 
     elem = this,
